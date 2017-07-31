@@ -2,8 +2,9 @@ FROM jenkinsci/jenkins
 
 USER root
 
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y build-essential
+RUN apt-get install -y build-essential apt-transport-https ca-certificates curl software-properties-common
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
 RUN apt-get install -y nodejs docker-ce
