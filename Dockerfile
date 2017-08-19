@@ -7,7 +7,7 @@ RUN apt-get -y install apt-transport-https ca-certificates curl software-propert
 RUN curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | apt-key add -
 RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
-RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs docker-ce
 RUN npm config set registry https://registry.npm.taobao.org
 RUN npm install -g gulp-cli
