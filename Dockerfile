@@ -12,7 +12,7 @@ RUN apt-get install -y nodejs docker-ce
 RUN npm config set registry https://registry.npm.taobao.org
 RUN npm install -g gulp-cli
 RUN npm install -g bower
-RUN npm i -g npm
+RUN npm install -g npm
 
 ENV TZ=Asia/Shanghai
 
