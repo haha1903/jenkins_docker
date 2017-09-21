@@ -15,4 +15,4 @@ RUN npm install -g bower
 
 ENV TZ=Asia/Shanghai
 
-USER jenkins
+# USER jenkins
