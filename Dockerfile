@@ -10,10 +10,9 @@ RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debia
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs docker-ce
 RUN npm config set registry https://registry.npm.taobao.org
-RUN npm install -g npm
 RUN npm install -g gulp-cli
 RUN npm install -g bower
 
 ENV TZ=Asia/Shanghai
 
-# USER jenkins
+USER jenkins
